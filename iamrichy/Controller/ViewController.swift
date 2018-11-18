@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     // METODOS
     //hemos creado una función arrastrando desde el Storyboard con ctrl pulsado: al conectar se crea una función @IBAction, el sender es el objeto quien ha llamdo a esta función
     @IBAction func ButtonPulsado(_ sender: UIButton) {
+        /* Se comenta esta parte porque para continuar con la parte 9 donde se dota de otra funcionalidad a este método. Se mantiene ete código comentad como referencia porque pertenece a las partes 6, 7 y 8
         //esto ocurrirá cuando se haya pulsado el botón
         //imprimimos en consola (no lo ve el usuario)
         print("Has pulsado el botón: Púlsame y serás Richy")
@@ -38,7 +39,35 @@ class ViewController: UIViewController {
         self.imageViewDiamante.image = UIImage(named: "diamond-image")
         //cabiar el texto del propio botón (al ser pulsado)
         //self.buttonPulsame.title(for: .normal)
+        */
         
+        let controller = UIAlertController(title: "Soy Richy!", message: """
+            💸 Soy rico
+            👏 Me lo merezco
+            😇 Soy bueno
+            🥰 Sano y Exitoso
+            """, preferredStyle: .actionSheet)
+        //le ponemos botones para aceptar (cerrar la alerta)
+        //un UIAlertController es totalmente inútil sino le ponemos un botón para cerrarla
+        //el botón se coloca justo antes de mostrar la alerta (con show)
+        //y se crea cada botón por separado (si hay varios)
+
+        //creamos botón
+        let action = UIAlertAction(title: "Aceptar", style: .default, handler: nil)
+        //añadimos la acción
+        controller.addAction(action)
+        
+        //creamos botón 2
+        let action2 = UIAlertAction(title: "Borrar", style: .destructive, handler: nil)
+        //añadimos la acción
+        controller.addAction(action2)
+        
+        //creamos botón 3
+        let action3 = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+        //añadimos la acción
+        controller.addAction(action3)
+        
+        self.show(controller, sender: self)
     }
     
 }
