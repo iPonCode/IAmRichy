@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         self.labelTitulo.textColor = UIColor.green
         
         //cambiar la imágen del diamante al pulsar el botón
-        //self.imageViewDiamante.image = UIImage(named: "nombre-de-la-imagen-cuando-la-añadas-a-xcode")
+        self.imageViewDiamante.image = UIImage(named: "diamond-image")
         //cabiar el texto del propio botón (al ser pulsado)
         //self.buttonPulsame.title(for: .normal)
         
