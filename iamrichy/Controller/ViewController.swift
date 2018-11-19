@@ -53,17 +53,23 @@ class ViewController: UIViewController {
         //y se crea cada botón por separado (si hay varios)
 
         //creamos botón
-        let action = UIAlertAction(title: "Aceptar", style: .default, handler: nil)
+        let action1 = UIAlertAction(title: "Aceptar", style: .default) { (alertAction) in
+            print("Has pulsado el botón ACEPTAR")
+        }
         //añadimos la acción
-        controller.addAction(action)
+        controller.addAction(action1)
         
         //creamos botón 2
-        let action2 = UIAlertAction(title: "Borrar", style: .destructive, handler: nil)
+        let action2 = UIAlertAction(title: "Borrar", style: .destructive, handler: {(alertAction) in
+            print("Has pulsado el botón BORRAR")
+        })
         //añadimos la acción
         controller.addAction(action2)
         
         //creamos botón 3
-        let action3 = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+        let action3 = UIAlertAction(title: "Cancelar", style: .cancel) { _ in
+            print("Has pulsado el botón CANCELAR")
+        }
         //añadimos la acción
         controller.addAction(action3)
         
